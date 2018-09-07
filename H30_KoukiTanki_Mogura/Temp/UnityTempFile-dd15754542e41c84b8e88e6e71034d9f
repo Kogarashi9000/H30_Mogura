@@ -189,5 +189,7 @@
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
-Assets/Scenes/NewBehaviourScript.cs
+Assets/Script/MouseInfo.cs
+Assets/Script/NewBehaviourScript.cs
+Assets/Script/SceneLoad.cs
 -lib:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity"

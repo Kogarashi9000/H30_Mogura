@@ -61,7 +61,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Script\MouseInfo.cs" />
+    <Compile Include="Assets\Script\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Script\SceneLoad.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/K017A1361/製作/gamejam12/H30_KoukiTanki_Mogura/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
