@@ -1,1 +1,14 @@
-*.bin,*.info,*.dwlt,*.exe,*.dll
+*.bin*.info*.dwlt*.exe*.dll
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.pidb.meta
+*.apk
+*.htm
