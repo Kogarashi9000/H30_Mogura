@@ -61,9 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\MouseInfo.cs" />
-    <Compile Include="Assets\Script\NewBehaviourScript.cs" />
-    <Compile Include="Assets\Script\SceneLoad.cs" />
+    <Compile Include="Assets\Scripts\ClickNextScene.cs" />
+    <Compile Include="Assets\Scripts\FadeIn.cs" />
+    <Compile Include="Assets\Scripts\FadeOut.cs" />
+    <Compile Include="Assets\Scripts\MouseInfo.cs" />
+    <Compile Include="Assets\Scripts\SceneLoad.cs" />
+    <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/K017A1361/製作/gamejam12/H30_KoukiTanki_Mogura/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
