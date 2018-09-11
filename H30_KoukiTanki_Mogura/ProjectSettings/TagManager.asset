@@ -8,6 +8,8 @@ TagManager:
   - End
   - Credit
   - Tutorial
+  - Retry
+  - Title
   layers:
   - Default
   - TransparentFX

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 小川
+/// </summary>
 public class TitleManager : MonoBehaviour
 {
     [SerializeField] GameObject fadeOutObj;
@@ -52,15 +55,18 @@ public class TitleManager : MonoBehaviour
             switch (nameTag)
             {
                 case "Start":
-                    SceneLoad.Instance.Main();
+                    GoToStartOrTitle.Instance.Start();
+                    SceneLoad.Instance.Tutorial();
                     break;
                 case "End":
                     SceneLoad.Instance.Exit();
                     break;
                 case "Credit":
+                    GoToStartOrTitle.Instance.Title();
                     SceneLoad.Instance.Credit();
                     break;
                 case "Tutorial":
+                    GoToStartOrTitle.Instance.Title();
                     SceneLoad.Instance.Tutorial();
                     break;
             }

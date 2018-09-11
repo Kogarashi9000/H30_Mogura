@@ -64,7 +64,9 @@
     <Compile Include="Assets\Scripts\ClickNextScene.cs" />
     <Compile Include="Assets\Scripts\FadeIn.cs" />
     <Compile Include="Assets\Scripts\FadeOut.cs" />
+    <Compile Include="Assets\Scripts\GoToStartOrTitle.cs" />
     <Compile Include="Assets\Scripts\MouseInfo.cs" />
+    <Compile Include="Assets\Scripts\ResultManager.cs" />
     <Compile Include="Assets\Scripts\SceneLoad.cs" />
     <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">

@@ -52,8 +52,11 @@ public class MouseInfo
         Ray ray = new Ray();
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        GameObject hit = Physics2D.Raycast(ray.origin, ray.direction).collider.gameObject;
+        if (Physics2D.Raycast(ray.origin, ray.direction))
+        {
+            return Physics2D.Raycast(ray.origin, ray.direction).collider.gameObject;
+        }
 
-        return hit;
+        return null;
     }
 }

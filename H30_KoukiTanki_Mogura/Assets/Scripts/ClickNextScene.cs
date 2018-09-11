@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 小川
+/// </summary>
 public class ClickNextScene : MonoBehaviour
 {
     [SerializeField] GameObject fadeOutObj;
@@ -32,7 +35,7 @@ public class ClickNextScene : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             fadeOutObj = Instantiate(fadeOutObj);
-            fadeOut = fadeOut.GetComponent<FadeOut>();
+            fadeOut = fadeOutObj.GetComponent<FadeOut>();
             endFlag = true;
         }
     }
@@ -41,7 +44,8 @@ public class ClickNextScene : MonoBehaviour
     {
         if (fadeOut.Endflag)
         {
-            SceneLoad.Instance.Title();
+            if (!GoToStartOrTitle.Instance.IsStart) SceneLoad.Instance.Title();
+            else SceneLoad.Instance.Main();
         }
     }
 }
