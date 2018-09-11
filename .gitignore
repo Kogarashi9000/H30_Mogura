@@ -45,6 +45,7 @@ Thumbs.db
 *.pyc #python bytecode cache, for some plugins.
 sysinfo.txt #Unity3D Generated File On Crash Reports
 popcorn.htm
+
 *.dwlt*.bin*.mdb*.suo*.csproj
 *.backup
 H30_KoukiTanki_Mogura/Temp/
