@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// 小川
-/// </summary>
-public class TitleManager : MonoBehaviour
+public class ResultManager : MonoBehaviour
 {
     [SerializeField] GameObject fadeOutObj;
     FadeOut fadeOut;
-    bool endflag;
+    bool endflag = false;
     string nameTag = null;
 
     // Use this for initialization
     void Start()
     {
-        nameTag = null;
         endflag = false;
+        nameTag = null;
     }
 
     // Update is called once per frame
@@ -34,13 +31,12 @@ public class TitleManager : MonoBehaviour
 
     void Select()
     {
-
         if (Input.GetMouseButtonDown(0) && MouseInfo.Instance.MouseRay2D())
         {
             nameTag = MouseInfo.Instance.MouseRay2D().tag;
         }
 
-        if (nameTag == "Start" || nameTag == "End" || nameTag == "Credit" || nameTag == "Tutorial")
+        if (nameTag == "Title" || nameTag == "Retry")
         {
             endflag = true;
             fadeOutObj = Instantiate(fadeOutObj);
@@ -54,24 +50,13 @@ public class TitleManager : MonoBehaviour
         {
             switch (nameTag)
             {
-                case "Start":
-                    GoToStartOrTitle.Instance.Start();
-                    SceneLoad.Instance.Tutorial();
+                case "Title":
+                    SceneLoad.Instance.Title();
                     break;
-                case "End":
-                    SceneLoad.Instance.Exit();
-                    break;
-                case "Credit":
-                    GoToStartOrTitle.Instance.Title();
-                    SceneLoad.Instance.Credit();
-                    break;
-                case "Tutorial":
-                    GoToStartOrTitle.Instance.Title();
-                    SceneLoad.Instance.Tutorial();
+                case "Retry":
+                    SceneLoad.Instance.Main();
                     break;
             }
         }
     }
 }
-
-
