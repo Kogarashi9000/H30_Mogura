@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// 小川
@@ -30,12 +31,10 @@ public class MouseInfo
     /// <returns></returns>
     public GameObject MouseRay()
     {
-        Ray ray = new Ray();
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit = new RaycastHit();
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        if (Physics.Raycast(RayShoot(), out hit, Mathf.Infinity))
         {
             return hit.collider.gameObject;
         }
@@ -49,14 +48,19 @@ public class MouseInfo
     /// <returns></returns>
     public GameObject MouseRay2D()
     {
-        Ray ray = new Ray();
-        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics2D.Raycast(ray.origin, ray.direction))
+        if (Physics2D.Raycast(RayShoot().origin, RayShoot().direction))
         {
-            return Physics2D.Raycast(ray.origin, ray.direction).collider.gameObject;
+            return Physics2D.Raycast(RayShoot().origin, RayShoot().direction).collider.gameObject;
         }
 
         return null;
+    }
+
+    Ray RayShoot()
+    {
+        Ray ray = new Ray();
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        return ray;
     }
 }
