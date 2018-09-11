@@ -45,7 +45,7 @@ popcorn.htm
 *.tmp
 *.pidb.meta
 *.apk
-*.htm
+*.htm*.info
 H30_KoukiTanki_Mogura/Temp/
 Temp/
 H30_KoukiTanki_Mogura/Library/
