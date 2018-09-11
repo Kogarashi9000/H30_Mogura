@@ -9,20 +9,7 @@ Library/
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-ExportedObj/
-*.svd
-*.userprefs
-*.csproj
-*.pidb
-*.suo
-*.sln
-*.user
-*.unityproj
-*.booproj
-*.tmp
-*.pidb.meta
-*.apk
-*.htm
+
 
 # ============ #
 # OS generated #
@@ -48,6 +35,19 @@ popcorn.htm
 
 *.dwlt*.bin*.mdb*.suo*.csproj
 *.backup
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.pidb.meta
+*.apk
+*.htm
 H30_KoukiTanki_Mogura/Temp/
 Temp/
 H30_KoukiTanki_Mogura/Library/
