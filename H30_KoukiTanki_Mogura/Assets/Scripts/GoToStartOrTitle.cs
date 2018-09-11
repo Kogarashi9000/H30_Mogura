@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 小川
+/// </summary>
 public class GoToStartOrTitle
 {
     static GoToStartOrTitle instance;

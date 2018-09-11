@@ -10,49 +10,60 @@ public class TitleManager : MonoBehaviour
     [SerializeField] GameObject fadeOutObj;
     FadeOut fadeOut;
     bool endflag;
-    string nameTag = null;
+    string name = null;
 
     // Use this for initialization
     void Start()
     {
-        nameTag = null;
+        name = null;
         endflag = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!endflag)
-        {
-            Select();
-        }
-        else
+        if (endflag)
         {
             Next();
         }
     }
 
-    void Select()
+    public void StartSelect()
     {
+        name = "Start";
+        End();
+    }
 
-        if (Input.GetMouseButtonDown(0) && MouseInfo.Instance.MouseRay2D())
-        {
-            nameTag = MouseInfo.Instance.MouseRay2D().tag;
-        }
+    public void EndSelect()
+    {
+        name = "End";
+        End();
+    }
 
-        if (nameTag == "Start" || nameTag == "End" || nameTag == "Credit" || nameTag == "Tutorial")
-        {
-            endflag = true;
-            fadeOutObj = Instantiate(fadeOutObj);
-            fadeOut = fadeOutObj.GetComponent<FadeOut>();
-        }
+    public void CreditSelect()
+    {
+        name = "Credit";
+        End();
+    }
+
+    public void TutorialSelect()
+    {
+        name = "Tutorial";
+        End();
+    }
+
+    void End()
+    {
+        endflag = true;
+        fadeOutObj = Instantiate(fadeOutObj);
+        fadeOut = fadeOutObj.GetComponent<FadeOut>();
     }
 
     void Next()
     {
         if (fadeOut.Endflag)
         {
-            switch (nameTag)
+            switch (name)
             {
                 case "Start":
                     GoToStartOrTitle.Instance.Start();
