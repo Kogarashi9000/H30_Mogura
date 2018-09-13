@@ -16,6 +16,8 @@ public class Cast_Time_sqript : MonoBehaviour {
     public float castTime;
     public float limitTime;
 
+    public GameObject damagemogura;
+
     private void Start() {
         UIobj_cast.fillAmount = 0;
         backpanel.SetActive(false);
@@ -58,6 +60,11 @@ public class Cast_Time_sqript : MonoBehaviour {
                         backpanel.SetActive(false);
                         UIobj_limit.fillAmount = 1.0f;
                         isCast = true;
+                        mogura.GetComponent<MeshRenderer>().enabled = true;
+                        if(damagemogura.activeSelf == true)
+                        {
+                            damagemogura.SetActive(false);
+                        }
                     }
                 }
             }

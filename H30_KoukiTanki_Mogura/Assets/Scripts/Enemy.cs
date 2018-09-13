@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
                     if (hit.collider.tag == "Player")
                     {
                         isHunmer = true;
-                        StartCoroutine(Attack(hit.collider.gameObject.GetComponent<MoleMotion>()));
+                        StartCoroutine(Attack(hit.collider.gameObject.GetComponent<MoleMotion>(), hit.collider.gameObject));
                     }
                 }
                 velocity = Vector3.zero;
@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    IEnumerator Attack(MoleMotion mole)
+    IEnumerator Attack(MoleMotion mole, GameObject moleObj)
     {
         float rate = 0;
 
@@ -102,6 +102,8 @@ public class Enemy : MonoBehaviour
         while (mole.Now == Motion.UP || mole.Now == Motion.Top)
         {
             mole.Damage();
+            moleObj.transform.GetChild(0).gameObject.SetActive(true);
+            moleObj.GetComponent<MeshRenderer>().enabled = false;
             yield return null;
 
             if (mole.Now == Motion.Idle || mole.Now == Motion.Down)
