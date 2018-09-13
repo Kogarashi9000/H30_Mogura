@@ -51,6 +51,7 @@ public class GameTimer : MonoBehaviour
 
             if (timer <= 0)
             {
+                PlaySE.PlaySETimeUp();
                 //ここで終わる処理
                 Array.ForEach(buttons, all => all.enabled = false);
                 GameEndFlag = true;

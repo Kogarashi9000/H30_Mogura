@@ -7,6 +7,7 @@ public class PlaySE : MonoBehaviour {
     private static AudioSource Up;
     private static AudioSource Upforce;
     private static AudioSource Down;
+    private static AudioSource TimeUp;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,7 @@ public class PlaySE : MonoBehaviour {
         Up = audioSources[2];
         Upforce = audioSources[1];
         Down = audioSources[0];
+        TimeUp = audioSources[3];
     }
 	
 	// Update is called once per frame
@@ -33,5 +35,10 @@ public class PlaySE : MonoBehaviour {
     public static void PlaySeDown()
     {
         Down.PlayOneShot(Down.clip);
+    }
+
+    public static void PlaySETimeUp()
+    {
+        TimeUp.PlayOneShot(TimeUp.clip);
     }
 }
