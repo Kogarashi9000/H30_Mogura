@@ -31,7 +31,7 @@ public class FadeOut : MonoBehaviour
             if (alpha >= 1)
             {
                 Endflag = true;
-                StopCoroutine(fade);
+                yield break;
             }
             yield return null;
         }
