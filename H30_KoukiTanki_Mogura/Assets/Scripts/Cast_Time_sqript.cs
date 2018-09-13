@@ -19,7 +19,7 @@ public class Cast_Time_sqript : MonoBehaviour {
     private void Start() {
         UIobj_cast.fillAmount = 0;
         backpanel.SetActive(false);
-        isCast = false;
+        isCast = true;
     }
 
     // Update is called once per frame
@@ -71,7 +71,5 @@ public class Cast_Time_sqript : MonoBehaviour {
                 UIobj_limit.fillAmount = 0.0f;
             }
         }
-
-
     }
 }

@@ -53,13 +53,13 @@ public class CounterTimer : MonoBehaviour
             {
                 text.text = ((int)startTime).ToString();
             }
+        }
 
-            if (startTime <= 0 && !CanStart)
-            {
-                gameTimer.GameStart();
-                CanStart = true;
-                text.gameObject.SetActive(false);
-            }
+        if (startTime <= 0 && !CanStart)
+        {
+            gameTimer.GameStart();
+            text.gameObject.SetActive(false);
+            CanStart = true;
         }
     }
 }

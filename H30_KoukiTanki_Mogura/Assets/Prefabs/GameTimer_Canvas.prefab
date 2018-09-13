@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 114567698256507374}
-  timer: 5
+  timer: 120
   buttons:
   - {fileID: 0}
   - {fileID: 0}
@@ -138,6 +138,7 @@ MonoBehaviour:
   - {fileID: 0}
   fadeOutObj: {fileID: 1822636221390202, guid: 4e8db8eafc63a884faa49d9cb4e6317f, type: 2}
   endText: {fileID: 114041855439047472}
+  moleMotions: []
 --- !u!114 &114537950750575474
 MonoBehaviour:
   m_ObjectHideFlags: 1
