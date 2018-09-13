@@ -13,6 +13,18 @@ public class HiScoreText : MonoBehaviour
 
     void Awake()
     {
-        text.text = "はいすこあ:" + hiScore.ToString();
+        HiScoreStore.GetInstance().ReadFile();
+        text.text = "はいすこあ:" + HiScoreStore.GetInstance().HiScore;
+    }
+
+    /// <summary>
+    /// シーンが消えるとき
+    /// </summary>
+    private void OnDestroy()
+    {
+        if (hiScore >= HiScoreStore.GetInstance().HiScore)
+        {
+            HiScoreStore.GetInstance().WriteFile();
+        }
     }
 }

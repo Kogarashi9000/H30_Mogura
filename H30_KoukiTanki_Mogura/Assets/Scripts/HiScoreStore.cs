@@ -20,7 +20,7 @@ public sealed class HiScoreStore
     private string[] hiScoreArray;
 
     //ハイスコア
-    public int GetHiScore { get; set; }
+    public int HiScore { get; set; }
 
     /// <summary>
     /// インスタンス取得
@@ -40,7 +40,7 @@ public sealed class HiScoreStore
         //セーブ先のファイルパス
         string filepath = Application.dataPath + "/StreamingAssets/HiScore.txt";
         
-        hiScoreArray[0] = GetHiScore.ToString();
+        hiScoreArray[0] = HiScore.ToString();
 
         File.WriteAllLines(filepath,hiScoreArray , Encoding.GetEncoding(932));
     }
@@ -48,7 +48,7 @@ public sealed class HiScoreStore
     /// <summary>
     /// 読み込み用関数
     /// </summary>
-    void ReadFile()
+    public void ReadFile()
     {
         //AccountSaveを読み込ませる
         string filepath = Application.dataPath + "/StreamingAssets/HiScore.txt";
@@ -62,7 +62,11 @@ public sealed class HiScoreStore
         {
             //ReadAllLinesで改行ごとに配列の中身を作ってくれる
             hiScoreArray = File.ReadAllLines(filepath, Encoding.GetEncoding(932));
-            GetHiScore = int.Parse(hiScoreArray[0]);
+
+            if (hiScoreArray[0] != null)
+            {
+                HiScore = int.Parse(hiScoreArray[0]);
+            }
         }
     }
 }
