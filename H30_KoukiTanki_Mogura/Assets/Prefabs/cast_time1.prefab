@@ -297,6 +297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c39f002980fcc6d438f592842442559d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  back: {fileID: 114418652813419996}
   UIobj_cast: {fileID: 114653604258147528}
   UIobj_limit: {fileID: 114304623764874684}
   roop: 1
@@ -416,7 +417,7 @@ RectTransform:
   m_GameObject: {fileID: 1563341305309728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.88495576, y: 0.88495576, z: 0.88495576}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224518825953830836}
   m_Father: {fileID: 224520710997444576}
@@ -424,7 +425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -272.56638, y: -150.44247}
+  m_AnchoredPosition: {x: -308, y: -170}
   m_SizeDelta: {x: 206, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224184779363205168
