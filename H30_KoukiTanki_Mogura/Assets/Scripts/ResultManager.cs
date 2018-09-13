@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class ResultManager : MonoBehaviour
 {
+    [SerializeField]
+    AudioSource audioSource;
     [SerializeField] GameObject fadeOutObj;
     FadeOut fadeOut;
     bool endflag = false;
@@ -42,6 +44,7 @@ public class ResultManager : MonoBehaviour
 
     void End()
     {
+        audioSource.Play();
         endflag = true;
         fadeOutObj = Instantiate(fadeOutObj);
         fadeOut = fadeOutObj.GetComponent<FadeOut>();
