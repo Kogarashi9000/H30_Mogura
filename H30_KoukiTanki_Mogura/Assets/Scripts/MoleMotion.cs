@@ -17,10 +17,14 @@ public class MoleMotion : MonoBehaviour
     Vector3 startPos;
     Vector3 targetPos;
     float rate;
+    float downNum;
+    bool gameEndFlag;
 
     // Use this for initialization
     void Start()
     {
+        gameEndFlag = false;
+        downNum = 2;
         rate = 0;
         startPos = mole.transform.position;
         Now = Motion.Idle;
@@ -43,7 +47,14 @@ public class MoleMotion : MonoBehaviour
                 break;
 
             case Motion.Down:
-                rate += Time.deltaTime * 2;
+                if (!gameEndFlag)
+                {
+                    rate += Time.deltaTime * 2;
+                }
+                else
+                {
+                    rate += Time.deltaTime / 10;
+                }
 
                 mole.transform.position = Vector3.Lerp(mole.transform.position, startPos, rate);
                 if (mole.transform.position == startPos)
@@ -66,16 +77,7 @@ public class MoleMotion : MonoBehaviour
 
     public void Down()
     {
-        if (Now == Motion.Top)
-        {
-            MotionReset();
-            Now = Motion.Down;
-        }
-    }
-
-    public void HalfWayDown()
-    {
-        if (Now == Motion.UP )
+        if (Now == Motion.Top || Now == Motion.UP)
         {
             MotionReset();
             Now = Motion.Down;
@@ -85,5 +87,14 @@ public class MoleMotion : MonoBehaviour
     void MotionReset()
     {
         rate = 0;
+    }
+
+    public void GameEnd(GameTimer gameTimer)
+    {
+        if (Now == Motion.Top || Now == Motion.UP)
+        {
+            gameEndFlag = gameTimer.GameEndFlag;
+            Down();
+        }
     }
 }

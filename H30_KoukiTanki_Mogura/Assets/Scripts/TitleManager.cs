@@ -52,7 +52,7 @@ public class TitleManager : MonoBehaviour
         End();
     }
 
-    void End()
+    public void End()
     {
         endflag = true;
         fadeOutObj = Instantiate(fadeOutObj);

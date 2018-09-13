@@ -5,6 +5,7 @@ using UnityEngine;
 public class TitleMole : MonoBehaviour
 {
     [SerializeField] GameObject[] moles;
+    [SerializeField] TitleManager titleManager;
     Vector3 endPos;
     float rate = 0;
     bool endFlag;
@@ -18,13 +19,17 @@ public class TitleMole : MonoBehaviour
     IEnumerator Motion(int i)
     {
         endPos = new Vector3(moles[i].transform.position.x, moles[i].transform.position.y + 3, moles[i].transform.position.z);
-
+        bool isRate = false;
         while (true)
         {
             rate += Time.deltaTime / 2;
             moles[i].transform.position = Vector3.Lerp(moles[i].transform.position, endPos, rate);
-
-            if (rate >= 1)
+            if (rate >= 0.2f && !isRate)
+            {
+                isRate = true;
+                titleManager.End();
+            }
+            else if (rate >= 1)
             {
                 yield break;
             }
@@ -37,6 +42,7 @@ public class TitleMole : MonoBehaviour
         if (!endFlag)
         {
             endFlag = true;
+            titleManager.StartSelect();
             StartCoroutine(Motion(0));
         }
     }
@@ -45,6 +51,7 @@ public class TitleMole : MonoBehaviour
     {
         if (!endFlag)
         {
+            titleManager.EndSelect();
             endFlag = true;
             StartCoroutine(Motion(1));
         }
@@ -54,6 +61,7 @@ public class TitleMole : MonoBehaviour
     {
         if (!endFlag)
         {
+            titleManager.TutorialSelect();
             endFlag = true;
             StartCoroutine(Motion(2));
         }
@@ -63,6 +71,7 @@ public class TitleMole : MonoBehaviour
     {
         if (!endFlag)
         {
+            titleManager.CreditSelect();
             endFlag = true;
             StartCoroutine(Motion(3));
         }

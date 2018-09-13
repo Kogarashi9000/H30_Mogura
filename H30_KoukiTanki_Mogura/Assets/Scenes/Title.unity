@@ -213,13 +213,13 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.57062787, b: 0.0990566, a: 1}
+  m_Color: {r: 0.85882354, g: 0.36726826, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1277,6 +1277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647064765}
   - component: {fileID: 1647064766}
+  - component: {fileID: 1647064767}
   m_Layer: 0
   m_Name: TitleManager
   m_TagString: Untagged
@@ -1313,6 +1314,19 @@ MonoBehaviour:
   - {fileID: 1325080157}
   - {fileID: 174676976}
   - {fileID: 1864673957}
+  titleManager: {fileID: 1647064767}
+--- !u!114 &1647064767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647064764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9289150f98ceabe4eb67c66ba1047728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOutObj: {fileID: 1822636221390202, guid: 4e8db8eafc63a884faa49d9cb4e6317f, type: 2}
 --- !u!1 &1695323809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,8 +1460,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88.6, y: -172.77}
-  m_SizeDelta: {x: 97.73, y: 62.5}
+  m_AnchoredPosition: {x: -88.06, y: -172.77}
+  m_SizeDelta: {x: 99, y: 62.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1823944818
 MonoBehaviour:
@@ -1470,7 +1484,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 653748b29fa297943abdc01a69d5bb56, type: 3}
-    m_FontSize: 25
+    m_FontSize: 23
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
