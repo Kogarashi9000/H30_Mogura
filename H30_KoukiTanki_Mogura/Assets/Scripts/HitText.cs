@@ -14,6 +14,7 @@ public class HitText : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        hitCnt = ScorePresent.Instance.Hit;
         text.text = "ひっと　　:" + hitCnt.ToString();
     }
 

@@ -13,6 +13,7 @@ public class ScoreText : MonoBehaviour
 
     void Awake()
     {
+        score = ScorePresent.Instance.Score;
         text.text = "すこあ　　:" + score.ToString();
     }
 }
