@@ -56,11 +56,11 @@ public class MoleMotion : MonoBehaviour
                 {
                     if (!isDamage)
                     {
-                    rate += Time.deltaTime * 2;
+                        rate += Time.deltaTime * 2;
                     }
-                    else if(isDamage)
+                    else if (isDamage)
                     {
-                        rate += Time.deltaTime / 10;
+                        rate += Time.deltaTime /3;
                     }
                 }
                 else
@@ -68,11 +68,10 @@ public class MoleMotion : MonoBehaviour
                     rate += Time.deltaTime / 10;
                 }
 
-
-
                 mole.transform.position = Vector3.Lerp(mole.transform.position, startPos, rate);
                 if (mole.transform.position == startPos)
                 {
+                    if (isDamage) isDamage = false;
                     rate = 0;
                     Now = Motion.Idle;
                 }

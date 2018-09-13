@@ -101,7 +101,7 @@ public class Enemy : MonoBehaviour
 
         while (mole.Now == Motion.UP || mole.Now == Motion.Top)
         {
-            mole.Down();
+            mole.Damage();
             yield return null;
 
             if (mole.Now == Motion.Idle || mole.Now == Motion.Down)
