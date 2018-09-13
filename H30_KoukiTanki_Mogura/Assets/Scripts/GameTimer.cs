@@ -12,6 +12,7 @@ public class GameTimer : MonoBehaviour
     [SerializeField] GameObject fadeOutObj;
     [SerializeField] Text endText;
     [SerializeField] MoleMotion[] moleMotions;
+    [SerializeField] Score score;
     FadeOut fadeOut;
     string time_str = "たいむ:";
     bool endFlag;
@@ -51,6 +52,8 @@ public class GameTimer : MonoBehaviour
 
             if (timer <= 0)
             {
+                ScorePresent.Instance.Hit = Score.hit;
+                ScorePresent.Instance.Score = Score.score;
                 PlaySE.PlaySETimeUp();
                 //ここで終わる処理
                 Array.ForEach(buttons, all => all.enabled = false);

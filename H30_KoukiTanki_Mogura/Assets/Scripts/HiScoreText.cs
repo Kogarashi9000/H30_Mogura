@@ -9,12 +9,22 @@ using UnityEngine.UI;
 public class HiScoreText : MonoBehaviour
 {
     [SerializeField] Text text;
-    int hiScore = 0;
+    int hiScore = Score.score;
 
     void Awake()
     {
         HiScoreStore.GetInstance().ReadFile();
-        text.text = "はいすこあ:" + HiScoreStore.GetInstance().HiScore;
+        if (HiScoreStore.GetInstance().HiScore < Score.score)
+        {
+            text.text = "はいすこあ:" + Score.score;
+            HiScoreStore.GetInstance().HiScore = Score.score;
+
+        }
+        else
+        {
+            text.text = "はいすこあ:" + HiScoreStore.GetInstance().HiScore;
+
+        }
     }
 
     /// <summary>
