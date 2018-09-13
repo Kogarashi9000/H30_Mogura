@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TitleMole : MonoBehaviour
 {
+    [SerializeField]
+    AudioSource audioSource;
     [SerializeField] GameObject[] moles;
     [SerializeField] TitleManager titleManager;
     Vector3 endPos;
@@ -44,6 +46,7 @@ public class TitleMole : MonoBehaviour
         if (!endFlag)
         {
             endFlag = true;
+            audioSource.Play();
             titleManager.StartSelect();
             StartCoroutine(Motion(0));
         }
