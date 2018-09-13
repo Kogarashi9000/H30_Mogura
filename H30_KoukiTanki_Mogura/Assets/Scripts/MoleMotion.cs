@@ -17,10 +17,14 @@ public class MoleMotion : MonoBehaviour
     Vector3 startPos;
     Vector3 targetPos;
     float rate;
+    float downNum;
+    bool gameEndFlag;
 
     // Use this for initialization
     void Start()
     {
+        gameEndFlag = false;
+        downNum = 2;
         rate = 0;
         startPos = mole.transform.position;
         Now = Motion.Idle;
@@ -30,37 +34,41 @@ public class MoleMotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CounterTimer.CanStart)
+        switch (Now)
         {
-            switch (Now)
-            {
-                case Motion.UP:
-                    rate += Time.deltaTime / 5;
-                    mole.transform.position = Vector3.Lerp(mole.transform.position, targetPos, rate);
-                    if (rate >= 1)
-                    {
-                        rate = 0;
-                        Now = Motion.Top;
-                    }
-                    break;
+            case Motion.UP:
+                rate += Time.deltaTime / 5;
+                mole.transform.position = Vector3.Lerp(mole.transform.position, targetPos, rate);
+                if (rate >= 1)
+                {
+                    rate = 0;
+                    Now = Motion.Top;
+                }
+                break;
 
-                case Motion.Down:
+            case Motion.Down:
+                if (!gameEndFlag)
+                {
                     rate += Time.deltaTime * 2;
+                }
+                else
+                {
+                    rate += Time.deltaTime / 10;
+                }
 
-                    mole.transform.position = Vector3.Lerp(mole.transform.position, startPos, rate);
-                    if (mole.transform.position == startPos)
-                    {
-                        rate = 0;
-                        Now = Motion.Idle;
-                    }
-                    break;
-            }
+                mole.transform.position = Vector3.Lerp(mole.transform.position, startPos, rate);
+                if (mole.transform.position == startPos)
+                {
+                    rate = 0;
+                    Now = Motion.Idle;
+                }
+                break;
         }
     }
 
     public void Up()
     {
-        if (Now == Motion.Idle && CounterTimer.CanStart)
+        if (Now == Motion.Idle)
         {
             MotionReset();
             Now = Motion.UP;
@@ -69,16 +77,7 @@ public class MoleMotion : MonoBehaviour
 
     public void Down()
     {
-        if (Now == Motion.Top && CounterTimer.CanStart)
-        {
-            MotionReset();
-            Now = Motion.Down;
-        }
-    }
-
-    public void HalfWayDown()
-    {
-        if (Now == Motion.UP && CounterTimer.CanStart)
+        if (Now == Motion.Top || Now == Motion.UP)
         {
             MotionReset();
             Now = Motion.Down;
@@ -88,5 +87,14 @@ public class MoleMotion : MonoBehaviour
     void MotionReset()
     {
         rate = 0;
+    }
+
+    public void GameEnd(GameTimer gameTimer)
+    {
+        if (Now == Motion.Top || Now == Motion.UP)
+        {
+            gameEndFlag = gameTimer.GameEndFlag;
+            Down();
+        }
     }
 }
