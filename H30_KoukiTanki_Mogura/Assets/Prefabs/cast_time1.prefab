@@ -300,7 +300,7 @@ MonoBehaviour:
   back: {fileID: 114418652813419996}
   UIobj_cast: {fileID: 114653604258147528}
   UIobj_limit: {fileID: 114304623764874684}
-  roop: 1
+  isCast: 0
   mogura: {fileID: 0}
   backpanel: {fileID: 1563341305309728}
   castTime: 7

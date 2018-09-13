@@ -74,15 +74,24 @@ public class MoleMotion : MonoBehaviour
         {
             MotionReset();
             Now = Motion.UP;
+            if(canvas.GetComponent<Cast_Time_sqript>().UIobj_limit.fillAmount <= 0.0f)
+            {
+                PlaySE.PlaySeUpForce();
+            }
+            else
+            {
+                PlaySE.PlaySeUp();
+            }
         }
     }
 
     public void Down()
     {
-        if (Now == Motion.Top || Now == Motion.UP && CounterTimer.CanStart)
+        if ((Now == Motion.Top || Now == Motion.UP) && CounterTimer.CanStart)
         {
             MotionReset();
             Now = Motion.Down;
+            PlaySE.PlaySeDown();
         }
     }
 
