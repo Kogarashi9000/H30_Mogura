@@ -830,6 +830,11 @@ Prefab:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1681916984}
+    - target: {fileID: 23608675794149426, guid: 98a5f441974929440b44ad684937f8b8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98a5f441974929440b44ad684937f8b8, type: 2}
   m_IsPrefabAsset: 0
@@ -1537,6 +1542,11 @@ Prefab:
       propertyPath: moleMotions.Array.data[3]
       value: 
       objectReference: {fileID: 1337511110}
+    - target: {fileID: 114281706571706088, guid: f7f48b68eb19d8d458088644febac118,
+        type: 2}
+      propertyPath: timer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7f48b68eb19d8d458088644febac118, type: 2}
   m_IsPrefabAsset: 0
