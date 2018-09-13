@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    Score score;
     private CharacterController controller;
     private Animator anim;
     private Vector3 rightDestination;//右端
@@ -16,6 +18,7 @@ public class Enemy : MonoBehaviour
     private Transform rayBox;
     private float maxDistance = 10;//Rayの長さ
     bool isHunmer = false;
+    bool isadd = false;
 
     // Use this for initialization
     void Start()
@@ -46,6 +49,7 @@ public class Enemy : MonoBehaviour
                 {
                     if (hit.collider.tag == "Player")
                     {
+                        isadd = false;
                         isHunmer = true;
                         StartCoroutine(Attack(hit.collider.gameObject.GetComponent<MoleMotion>(), hit.collider.gameObject));
                     }
@@ -89,22 +93,55 @@ public class Enemy : MonoBehaviour
         {
             rate += Time.deltaTime / 3;
             gameObject.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 180, 0), rate);
-
+            if (mole.Now == Motion.Down) score.add(1);
             if (rate >= 1)
             {
+                if (mole.Now == Motion.Down || mole.Now == Motion.Idle)
+                {
+                    if (!isadd)
+                    {
+                        score.add(1);
+                        isadd = true;
+                    }
+                }
                 anim.SetTrigger("Hunmer");
                 yield return new WaitForSeconds(1);
                 break;
             }
             yield return null;
         }
+        if (mole.Now == Motion.Down || mole.Now == Motion.Idle)
+        {
+            if (!isadd)
+            {
+                score.add(2);
+                isadd = true;
+            }
+        }
 
         while (mole.Now == Motion.UP || mole.Now == Motion.Top)
         {
+
+            if (mole.Now == Motion.Down || mole.Now == Motion.Idle)
+            {
+                if (!isadd)
+                {
+                    score.add(3);
+                    isadd = true;
+                }
+            }
             mole.Damage();
             moleObj.transform.GetChild(0).gameObject.SetActive(true);
             moleObj.GetComponent<MeshRenderer>().enabled = false;
             yield return null;
+            if (mole.Now == Motion.Down || mole.Now == Motion.Idle)
+            {
+                if (!isadd)
+                {
+                    score.add(-1);
+                    isadd = true;
+                }
+            }
 
             if (mole.Now == Motion.Idle || mole.Now == Motion.Down)
                 break;
