@@ -31,25 +31,21 @@ public class TitleManager : MonoBehaviour
     public void StartSelect()
     {
         name = "Start";
-        End();
     }
 
     public void EndSelect()
     {
         name = "End";
-        End();
     }
 
     public void CreditSelect()
     {
         name = "Credit";
-        End();
     }
 
     public void TutorialSelect()
     {
         name = "Tutorial";
-        End();
     }
 
     public void End()

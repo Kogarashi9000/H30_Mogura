@@ -22,14 +22,16 @@ public class TitleMole : MonoBehaviour
         bool isRate = false;
         while (true)
         {
-            rate += Time.deltaTime / 2;
+            rate += Time.deltaTime / 5;
             moles[i].transform.position = Vector3.Lerp(moles[i].transform.position, endPos, rate);
+
             if (rate >= 0.2f && !isRate)
             {
-                isRate = true;
                 titleManager.End();
+                isRate = true;
             }
-            else if (rate >= 1)
+
+            if (rate >= 1)
             {
                 yield break;
             }

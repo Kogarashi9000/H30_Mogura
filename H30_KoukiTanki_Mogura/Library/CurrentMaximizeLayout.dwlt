@@ -20,12 +20,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1920
     height: 987
   m_MinSize: {x: 909, y: 421}
   m_MaxSize: {x: 22004, y: 10000}
   vertical: 0
   controlID: 5253
+=======
+    width: 1536
+    height: 771
+  m_MinSize: {x: 583, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
+  vertical: 0
+  controlID: 12090
+>>>>>>> origin/shogo
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,10 +55,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 499
     width: 909
     height: 559
+=======
+    x: 305.6
+    y: 92.8
+    width: 914
+    height: 459
+>>>>>>> origin/shogo
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
@@ -82,20 +98,34 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 909
       height: 542
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 454.5, y: 271}
+=======
+      width: 914
+      height: 442
+    m_Scale: {x: 1.25, y: 1.25}
+    m_Translation: {x: 457, y: 221}
+>>>>>>> origin/shogo
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -454.5
       y: -271
       width: 909
       height: 542
+=======
+      x: -365.6
+      y: -176.8
+      width: 731.2
+      height: 353.6
+>>>>>>> origin/shogo
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
@@ -123,13 +153,138 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 911
     height: 987
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
   controlID: 5225
+=======
+    width: 1221
+    height: 771
+  m_MinSize: {x: 306, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 12048
+>>>>>>> origin/shogo
 --- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+<<<<<<< HEAD
+=======
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 5}
+  - {fileID: 7}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1221
+    height: 480
+  m_MinSize: {x: 306, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+  controlID: 12026
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+>>>>>>> origin/shogo
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+<<<<<<< HEAD
+    width: 911
+    height: 407
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 5}
+=======
+    width: 303
+    height: 480
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 6}
+>>>>>>> origin/shogo
+  m_Panes:
+  - {fileID: 5}
+  m_Selected: 0
+  m_LastSelected: 0
+<<<<<<< HEAD
+--- !u!114 &5
+=======
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: -590624980919486359, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 92.8
+    width: 301
+    height: 459
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 84310000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 8835fcffae3bfcff5a8bfcfffaa3fcff72affcff98dffdff1280feffbc69ffffe269ffffe469ffffd86cffff1e6effff126fffff3cf4ffff000000004a5a00001e78000066790000c87b0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 5}
+    m_SearchString: 
+  m_ExpandedScenes:
+  - Title
+  m_CurrenRootInstanceID: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentSortingName: TransformSorting
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,18 +298,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
+    x: 303
     y: 0
-    width: 911
-    height: 407
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 5}
+    width: 918
+    height: 480
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
+  m_ActualView: {fileID: 2}
   m_Panes:
-  - {fileID: 5}
-  m_Selected: 0
+  - {fileID: 8}
+  - {fileID: 2}
+  - {fileID: 9}
+  m_Selected: 1
   m_LastSelected: 0
---- !u!114 &5
+--- !u!114 &8
+>>>>>>> origin/shogo
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,6 +338,7 @@ MonoBehaviour:
     height: 386
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
+<<<<<<< HEAD
   lastFramingTime: 471.39793531130425
   m_2DMode: 0
   m_isRotationLocked: 0
@@ -188,6 +347,16 @@ MonoBehaviour:
     m_Target: {x: 452, y: 254, z: 0}
     speed: 2
     m_Value: {x: 452, y: 254, z: 0}
+=======
+  lastFramingTime: 5444.49529628585
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 2.4136775, y: -28.225151, z: 61.251953}
+    speed: 2
+    m_Value: {x: 2.4136775, y: -28.225151, z: 61.251953}
+>>>>>>> origin/shogo
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -219,9 +388,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.16751906, y: -0.0014790795, z: 0.0002503147, w: -0.98586774}
   m_Size:
+<<<<<<< HEAD
     m_Target: 759.14856
     speed: 2
     m_Value: 759.14856
+=======
+    m_Target: 15.63738
+    speed: 2
+    m_Value: 15.63738
+>>>>>>> origin/shogo
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -484,10 +659,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 58
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Scripts
   m_LastFoldersGridSize: 58
   m_LastProjectPath: "C:\\Users\\K017A1352\\Desktop\\12\u73ED\\H30_KoukiTanki_Mogura"
@@ -498,6 +674,18 @@ MonoBehaviour:
     m_SelectedIDs: fe320000
     m_LastClickedID: 13054
     m_ExpandedIDs: 00000000e22d0000282e0000ac2e000004310000a231000000ca9a3b
+=======
+  - Assets/Scenes
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: "C:\\K017A1361\\\u88FD\u4F5C\\gamejam12\\H30_KoukiTanki_Mogura"
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 279}
+    m_SelectedIDs: 182f0000
+    m_LastClickedID: 12056
+    m_ExpandedIDs: 00000000aa2d0000ec2d00004a2e00009c3000002431000000ca9a3b
+>>>>>>> origin/shogo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -525,7 +713,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000e22d0000282e0000ac2e000004310000a231000000ca9a3b
+=======
+    m_ExpandedIDs: 00000000aa2d0000ec2d00004a2e00009c3000002431000000ca9a3b
+>>>>>>> origin/shogo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -550,10 +742,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: 8c330000
     m_LastClickedInstanceID: 13196
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 763000004a300000e62f00001a3000004a2d00003c2e0000ee2c00001c2d0000c22f00007a310000
+=======
+    m_SelectedInstanceIDs: 84310000
+    m_LastClickedInstanceID: 12676
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300009c3500002a6a0000c23c000000000000
+>>>>>>> origin/shogo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,15 +795,24 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1508
     y: 0
+<<<<<<< HEAD
     width: 412
     height: 987
+=======
+    width: 315
+    height: 771
+>>>>>>> origin/shogo
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   m_Selected: 0
+<<<<<<< HEAD
   m_LastSelected: 0
+=======
+  m_LastSelected: 1
+>>>>>>> origin/shogo
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52

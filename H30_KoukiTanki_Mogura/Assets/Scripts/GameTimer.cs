@@ -24,7 +24,6 @@ public class GameTimer : MonoBehaviour
         int timer_int = (int)timer;
         timerText.text = time_str + timer_int.ToString();
         endFlag = false;
-        GameStart();
     }
 
     // Update is called once per frame
