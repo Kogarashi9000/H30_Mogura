@@ -20,6 +20,8 @@ public class MoleMotion : MonoBehaviour
     float downNum;
     bool gameEndFlag;
 
+    public Canvas canvas;
+
     // Use this for initialization
     void Start()
     {
@@ -68,7 +70,7 @@ public class MoleMotion : MonoBehaviour
 
     public void Up()
     {
-        if (Now == Motion.Idle)
+        if (Now == Motion.Idle && CounterTimer.CanStart && canvas.GetComponent<Cast_Time_sqript>().isCast)
         {
             MotionReset();
             Now = Motion.UP;
@@ -77,7 +79,7 @@ public class MoleMotion : MonoBehaviour
 
     public void Down()
     {
-        if (Now == Motion.Top || Now == Motion.UP)
+        if (Now == Motion.Top || Now == Motion.UP && CounterTimer.CanStart)
         {
             MotionReset();
             Now = Motion.Down;
