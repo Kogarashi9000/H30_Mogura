@@ -30,34 +30,37 @@ public class MoleMotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (Now)
+        if (CounterTimer.CanStart)
         {
-            case Motion.UP:
-                rate += Time.deltaTime / 5;
-                mole.transform.position = Vector3.Lerp(mole.transform.position, targetPos, rate);
-                if (rate >= 1)
-                {
-                    rate = 0;
-                    Now = Motion.Top;
-                }
-                break;
+            switch (Now)
+            {
+                case Motion.UP:
+                    rate += Time.deltaTime / 5;
+                    mole.transform.position = Vector3.Lerp(mole.transform.position, targetPos, rate);
+                    if (rate >= 1)
+                    {
+                        rate = 0;
+                        Now = Motion.Top;
+                    }
+                    break;
 
-            case Motion.Down:
-                rate += Time.deltaTime * 2;
+                case Motion.Down:
+                    rate += Time.deltaTime * 2;
 
-                mole.transform.position = Vector3.Lerp(mole.transform.position, startPos, rate);
-                if (mole.transform.position == startPos)
-                {
-                    rate = 0;
-                    Now = Motion.Idle;
-                }
-                break;
+                    mole.transform.position = Vector3.Lerp(mole.transform.position, startPos, rate);
+                    if (mole.transform.position == startPos)
+                    {
+                        rate = 0;
+                        Now = Motion.Idle;
+                    }
+                    break;
+            }
         }
     }
 
     public void Up()
     {
-        if (Now == Motion.Idle)
+        if (Now == Motion.Idle && CounterTimer.CanStart)
         {
             MotionReset();
             Now = Motion.UP;
@@ -66,7 +69,7 @@ public class MoleMotion : MonoBehaviour
 
     public void Down()
     {
-        if (Now == Motion.Top)
+        if (Now == Motion.Top && CounterTimer.CanStart)
         {
             MotionReset();
             Now = Motion.Down;
@@ -75,7 +78,7 @@ public class MoleMotion : MonoBehaviour
 
     public void HalfWayDown()
     {
-        if (Now == Motion.UP )
+        if (Now == Motion.UP && CounterTimer.CanStart)
         {
             MotionReset();
             Now = Motion.Down;

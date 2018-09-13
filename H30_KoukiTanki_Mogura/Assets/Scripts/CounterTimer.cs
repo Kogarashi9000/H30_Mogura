@@ -24,7 +24,7 @@ public class CounterTimer : MonoBehaviour
 
     #region プロパティ
     //スタート可能か？
-    public bool CanStart { get; private set; }
+    public static bool CanStart { get; private set; }
     #endregion
 
     // Use this for initialization
@@ -41,11 +41,20 @@ public class CounterTimer : MonoBehaviour
         {
             //1秒ずつ減るようにする
             startTime = startTime - 1 * Time.deltaTime;
-            text.text = ((int)startTime).ToString();
+
+            if (startTime < 1)
+            {
+                text.text = "Start";
+            }
+            else
+            {
+                text.text = ((int)startTime).ToString();
+            }
 
             if (startTime <= 0)
             {
                 CanStart = true;
+                text.gameObject.SetActive(false);
             }
         }
     }
