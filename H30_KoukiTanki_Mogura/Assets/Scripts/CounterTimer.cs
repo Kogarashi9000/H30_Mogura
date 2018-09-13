@@ -54,7 +54,7 @@ public class CounterTimer : MonoBehaviour
                 text.text = ((int)startTime).ToString();
             }
 
-            if (startTime == 0)
+            if (startTime <= 0 && !CanStart)
             {
                 gameTimer.GameStart();
                 CanStart = true;
