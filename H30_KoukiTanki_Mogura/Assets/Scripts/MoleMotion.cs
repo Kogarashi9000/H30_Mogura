@@ -12,19 +12,22 @@ public enum Motion
 /// </summary>
 public class MoleMotion : MonoBehaviour
 {
-    [SerializeField] GameObject mole;
+    [SerializeField]
+    GameObject mole;
     public Motion Now { get; private set; }
     Vector3 startPos;
     Vector3 targetPos;
     float rate;
     float downNum;
     bool gameEndFlag;
+    bool isDamage;
 
     public Canvas canvas;
 
     // Use this for initialization
     void Start()
     {
+        isDamage = false;
         gameEndFlag = false;
         downNum = 2;
         rate = 0;
@@ -51,12 +54,21 @@ public class MoleMotion : MonoBehaviour
             case Motion.Down:
                 if (!gameEndFlag)
                 {
+                    if (!isDamage)
+                    {
                     rate += Time.deltaTime * 2;
+                    }
+                    else if(isDamage)
+                    {
+                        rate += Time.deltaTime / 10;
+                    }
                 }
                 else
                 {
                     rate += Time.deltaTime / 10;
                 }
+
+
 
                 mole.transform.position = Vector3.Lerp(mole.transform.position, startPos, rate);
                 if (mole.transform.position == startPos)
@@ -74,7 +86,7 @@ public class MoleMotion : MonoBehaviour
         {
             MotionReset();
             Now = Motion.UP;
-            if(canvas.GetComponent<Cast_Time_sqript>().UIobj_limit.fillAmount <= 0.0f)
+            if (canvas.GetComponent<Cast_Time_sqript>().UIobj_limit.fillAmount <= 0.0f)
             {
                 PlaySE.PlaySeUpForce();
             }
@@ -89,6 +101,17 @@ public class MoleMotion : MonoBehaviour
     {
         if ((Now == Motion.Top || Now == Motion.UP) && CounterTimer.CanStart)
         {
+            MotionReset();
+            Now = Motion.Down;
+            PlaySE.PlaySeDown();
+        }
+    }
+
+    public void Damage()
+    {
+        if ((Now == Motion.Top || Now == Motion.UP) && CounterTimer.CanStart)
+        {
+            isDamage = true;
             MotionReset();
             Now = Motion.Down;
             PlaySE.PlaySeDown();
