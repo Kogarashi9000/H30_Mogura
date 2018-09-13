@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Cast_Time_sqript : MonoBehaviour {
-
+    
     public Image back;
     public Image UIobj_cast;
     public Image UIobj_limit;
@@ -18,16 +18,20 @@ public class Cast_Time_sqript : MonoBehaviour {
 
     public GameObject damagemogura;
 
+    [SerializeField]
+    GameObject timer;
+
     private void Start() {
         UIobj_cast.fillAmount = 0;
         backpanel.SetActive(false);
         isCast = true;
+        damagemogura.SetActive(false);
     }
 
     // Update is called once per frame
     void Update () {
 
-        if(mogura.GetComponent<MoleMotion>().Now == Motion.Idle && CounterTimer.CanStart)
+        if(mogura.GetComponent<MoleMotion>().Now == Motion.Idle && CounterTimer.CanStart && !timer.GetComponent<GameTimer>().GameEndFlag)
         {
             if(UIobj_cast.fillAmount <= 0.0f && UIobj_limit.fillAmount <= 0.0f)
             {

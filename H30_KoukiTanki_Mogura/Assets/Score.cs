@@ -27,9 +27,20 @@ public class Score : MonoBehaviour
 
     public void add(int point)
     {
-        score += point;
+        if(score + point <= 0)
+        {
+            score = 0;
+        }
+        else
+        {
+            score += point;
+        }
         text.text = "すこあ：" + score;
     }
 
+    public static void addhit()
+    {
+        hit++;
+    }
 
 }

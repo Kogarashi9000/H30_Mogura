@@ -19,7 +19,7 @@ public class MoleMotion : MonoBehaviour
     Vector3 targetPos;
     float rate;
     float downNum;
-    bool gameEndFlag;
+    public bool GameEndFlag { get; private set; }
     bool isDamage;
 
     public Canvas canvas;
@@ -28,7 +28,7 @@ public class MoleMotion : MonoBehaviour
     void Start()
     {
         isDamage = false;
-        gameEndFlag = false;
+        GameEndFlag = false;
         downNum = 2;
         rate = 0;
         startPos = mole.transform.position;
@@ -52,7 +52,7 @@ public class MoleMotion : MonoBehaviour
                 break;
 
             case Motion.Down:
-                if (!gameEndFlag)
+                if (!GameEndFlag)
                 {
                     if (!isDamage)
                     {
@@ -60,7 +60,7 @@ public class MoleMotion : MonoBehaviour
                     }
                     else if (isDamage)
                     {
-                        rate += Time.deltaTime /3;
+                        rate += Time.deltaTime / 3;
                     }
                 }
                 else
@@ -126,7 +126,7 @@ public class MoleMotion : MonoBehaviour
     {
         if (Now == Motion.Top || Now == Motion.UP)
         {
-            gameEndFlag = gameTimer.GameEndFlag;
+            GameEndFlag = gameTimer.GameEndFlag;
             Down();
         }
     }
