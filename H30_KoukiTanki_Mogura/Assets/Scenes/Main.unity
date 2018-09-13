@@ -179,6 +179,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 16.656, y: -0.86, z: 9.078}
+--- !u!1 &278411413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1511955607024862, guid: 98a5f441974929440b44ad684937f8b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337511106}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +261,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+--- !u!1 &538125299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1777633990840454, guid: 98a5f441974929440b44ad684937f8b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337511106}
 --- !u!1001 &665331849
 Prefab:
   m_ObjectHideFlags: 0
@@ -374,11 +384,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224520710997444576, guid: 9ccaaf2351b711f4bb2794e94bddc566,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 224520710997444576, guid: 9ccaaf2351b711f4bb2794e94bddc566,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -467,6 +472,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114878438699844666, guid: 9ccaaf2351b711f4bb2794e94bddc566,
+        type: 2}
+      propertyPath: mogura
+      value: 
+      objectReference: {fileID: 538125299}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ccaaf2351b711f4bb2794e94bddc566, type: 2}
   m_IsPrefabAsset: 0
@@ -598,6 +608,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1337511106}
   m_Script: {fileID: 11500000, guid: 229df53ca17d4cb44a5057386db45e5c, type: 3}
+--- !u!1 &1396764489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1394962529782960, guid: 98a5f441974929440b44ad684937f8b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337511106}
 --- !u!1001 &1459340072
 Prefab:
   m_ObjectHideFlags: 0
@@ -605,11 +620,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224502279161672382, guid: a4e2a48305883694399e0fe82195dd96,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 224502279161672382, guid: a4e2a48305883694399e0fe82195dd96,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -700,6 +710,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114827501653405948, guid: a4e2a48305883694399e0fe82195dd96,
+        type: 2}
+      propertyPath: mogura
+      value: 
+      objectReference: {fileID: 278411413}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4e2a48305883694399e0fe82195dd96, type: 2}
   m_IsPrefabAsset: 0
@@ -920,9 +935,44 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: Up
       objectReference: {fileID: 0}
+    - target: {fileID: 114045244675912516, guid: 4c4f558544bf5fc45898cf75b60af0e7,
+        type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114817164284570242, guid: 4c4f558544bf5fc45898cf75b60af0e7,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114125366735582372, guid: 4c4f558544bf5fc45898cf75b60af0e7,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114046723331803732, guid: 4c4f558544bf5fc45898cf75b60af0e7,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114683744400405004, guid: 4c4f558544bf5fc45898cf75b60af0e7,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223521229601354020, guid: 4c4f558544bf5fc45898cf75b60af0e7,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c4f558544bf5fc45898cf75b60af0e7, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1715058638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1958587194290244, guid: 98a5f441974929440b44ad684937f8b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337511106}
 --- !u!1001 &1756831767
 Prefab:
   m_ObjectHideFlags: 0
@@ -972,11 +1022,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 224652996937165370, guid: caa67f3930b2ce3408004c08c2de3236,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 224652996937165370, guid: caa67f3930b2ce3408004c08c2de3236,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1067,6 +1112,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114360911783009398, guid: caa67f3930b2ce3408004c08c2de3236,
+        type: 2}
+      propertyPath: mogura
+      value: 
+      objectReference: {fileID: 1396764489}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caa67f3930b2ce3408004c08c2de3236, type: 2}
   m_IsPrefabAsset: 0
@@ -1121,11 +1171,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224644016716954536, guid: 39006bf37a6dc29418ddb1f4ac69dd9f,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 224644016716954536, guid: 39006bf37a6dc29418ddb1f4ac69dd9f,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1214,6 +1259,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114105669812729416, guid: 39006bf37a6dc29418ddb1f4ac69dd9f,
+        type: 2}
+      propertyPath: mogura
+      value: 
+      objectReference: {fileID: 1715058638}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39006bf37a6dc29418ddb1f4ac69dd9f, type: 2}
   m_IsPrefabAsset: 0
