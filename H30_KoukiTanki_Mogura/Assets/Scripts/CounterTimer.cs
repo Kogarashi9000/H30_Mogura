@@ -22,6 +22,9 @@ public class CounterTimer : MonoBehaviour
     [SerializeField]
     private Text text;
 
+    [SerializeField]
+    private GameTimer gameTimer;
+
     #region プロパティ
     //スタート可能か？
     public static bool CanStart { get; private set; }
@@ -51,8 +54,9 @@ public class CounterTimer : MonoBehaviour
                 text.text = ((int)startTime).ToString();
             }
 
-            if (startTime <= 0)
+            if (startTime == 0)
             {
+                gameTimer.GameStart();
                 CanStart = true;
                 text.gameObject.SetActive(false);
             }
